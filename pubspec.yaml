@@ -15,7 +15,17 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ^2.0.0
   gtk_window: ^0.1.1
-
+  enough_ascii_art: ^1.1.0
 
 flutter:
   uses-material-design: true
+
+# add assets
+  assets:
+    - assets/figlet_fonts/
+
+# add fonts
+  fonts:
+    - family:  'Agave'
+      fonts:
+        - asset: assets/fonts/agave.ttf
