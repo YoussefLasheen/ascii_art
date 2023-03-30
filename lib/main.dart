@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:gtk_window/gtk_window.dart';
+
+import 'main_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -9,11 +12,12 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData.dark(useMaterial3: true),
       home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
+        appBar: GTKHeaderBar(),
+        body: MainScreen(),
       ),
     );
   }
